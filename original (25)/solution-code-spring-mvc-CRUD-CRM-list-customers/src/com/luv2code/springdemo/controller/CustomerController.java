@@ -29,8 +29,7 @@ public class CustomerController {
 		
 		return "list-customers";
 	}
-
-	@RequestMapping("/greet")
+@RequestMapping("/greet")
 	public ModelAndView welcome(){
 
 		ModelAndView mvc=new ModelAndView();
@@ -41,6 +40,19 @@ public class CustomerController {
 
 	}
 	
+ feature-301
+	@RequestMapping("/welcome")
+	public ModelAndView welcome(){
+		
+		ModelAndView mvc=new ModelAndView();
+		mvc.addObject("msg","Welcome to sourav");
+		mvc.setViewName("view");
+
+		return mvc;
+		
+	}	
+
+
 }
 
 
