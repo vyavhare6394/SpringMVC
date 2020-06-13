@@ -29,7 +29,18 @@ public class CustomerController {
 		
 		return "list-customers";
 	}
-	
+
+	@RequestMapping("/welcome")
+	public ModelAndView welcome(){
+		
+		ModelAndView mvc=new ModelAndView();
+		mvc.addObject("msg","Welcome to sourav");
+		mvc.setViewName("view");
+
+		return mvc;
+		
+	}	
+
 }
 
 
